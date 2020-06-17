@@ -8,7 +8,9 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 ...
 
 ### R1D1
-[example] Started a Weather App. Worked on the draft layout of the app, struggled with OpenWeather API http://www.example.com
+Started watching Lecture 0 from [Harvard CS50 course](https://www.edx.org/course/cs50s-introduction-to-computer-science). This guy is passionate about what he's doing. I wish my classes have looked like that... Everything he says has a perfect sense and it's put in a very logical way. I also like the visual representations of what he says. E.g. turning on and off the lighbulbs to represent the number in binary system. The knowledge from the Lecture 0 is very basic but I already feel that the entire course will be a great reminder for me of eveything I learned during my Computer Science studies. Let's see!
+
+Notes from the Lecture 0 are [here](./notes/cs50/lecture_0.md).
 
 
 ### R1D0
