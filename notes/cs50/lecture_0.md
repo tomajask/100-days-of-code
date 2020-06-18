@@ -35,4 +35,7 @@ Number 50 represented as lightbulbs:
 - Pseudocode algorithm
 ![](img/lecture_0.md/2020-06-17-07-37-41.png)
 
---> TBC
+# Problem Set 0
+
+Implement a program using [Scratch](https://scratch.mit.edu/).
+

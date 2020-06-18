@@ -5,7 +5,9 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 ## Log
 
 ### R1D2
-...
+Finished watching the Lecture 0. Now, I need to implement a program accordingly to the requirements in [Scratch](https://scratch.mit.edu/) which is basically a visual programming language.
+I've also read an interesting article about renaming `master` branch to `main` in Github on [dev.to](https://dev.to/dandv/8-problems-with-replacing-master-in-git-2hck).
+Plan for tomorrow is to start implementing a Scratch program. I just don't know yet what it should do :thinking_face:
 
 ### R1D1
 Started watching Lecture 0 from [Harvard CS50 course](https://www.edx.org/course/cs50s-introduction-to-computer-science). This guy is passionate about what he's doing. I wish my classes have looked like that... Everything he says has a perfect sense and it's put in a very logical way. I also like the visual representations of what he says. E.g. turning on and off the lighbulbs to represent the number in binary system. The knowledge from the Lecture 0 is very basic but I already feel that the entire course will be a great reminder for me of eveything I learned during my Computer Science studies. Let's see!
