@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D3
+
+While I'm thinking of the project's topic for CS50 I started also [The Modern JavaScript Bootcamp](https://www.udemy.com/course/modern-javascript). I need to refresh my JavaScript knowledge. Many things have changed since I wrote JS code.
+
 ### R1D2
 Finished watching the Lecture 0. Now, I need to implement a program accordingly to the requirements in [Scratch](https://scratch.mit.edu/) which is basically a visual programming language.
 I've also read an interesting article about renaming `master` branch to `main` in Github on [dev.to](https://dev.to/dandv/8-problems-with-replacing-master-in-git-2hck).
