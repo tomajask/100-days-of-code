@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D4 & R1D5
+
+Continued with JS course -> variables + control flow.
+
 ### R1D3
 
 While I'm thinking of the project's topic for CS50 I started also [The Modern JavaScript Bootcamp](https://www.udemy.com/course/modern-javascript). I need to refresh my JavaScript knowledge. Many things have changed since I wrote JS code.
