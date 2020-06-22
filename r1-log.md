@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D5
+
+Continued with JS course -> variable scopes.
+
 ### R1D4 & R1D5
 
 Continued with JS course -> variables + control flow.
