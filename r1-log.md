@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D8
+
+Continued with JS course -> objects & object references.
+
 ### R1D7
 
 Continued with JS course -> functions.
