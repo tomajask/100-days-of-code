@@ -16,3 +16,28 @@ console.log(myAccount)
 addExpense(myAccount, 2.50)
 
 console.log(myAccount)
+
+const addIncome = function (account, income) {
+  account.income += income
+}
+
+const resetAccount = function (account) {
+  account.income = 0
+  account.expenses = 0
+}
+
+const getAccountSummary = function (account) {
+  const balance = account.income - account.expenses
+  console.log(
+    `Account for ${account.name} has $${balance}. $${account.income} in income. ` +
+    `$${account.expenses} in expenses.`
+  )
+}
+
+resetAccount(myAccount)
+addExpense(myAccount, 1500)
+addExpense(myAccount, 100)
+addIncome(myAccount, 10000)
+getAccountSummary(myAccount)
+resetAccount(myAccount)
+getAccountSummary(myAccount)
