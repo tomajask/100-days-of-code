@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D10
+
+Continued with JS course -> arrays' methods.
+
 ### R1D9
 
 Continued with JS course -> objects & arrays.
