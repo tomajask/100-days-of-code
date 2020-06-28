@@ -187,3 +187,82 @@ Feature: Hear shout
 1 scenario (1 pending)
 3 steps (2 skipped, 1 pending)
 ```
+
+#### Quiz
+
+- Any text in a Cucumber Expression that is surrounded by parentheses `()` is considered optional.
+
+- Words in a Cucumber Expression that are separated by a slash `/` are considered alternates. There must be no whitespace between the word and the slash.
+
+- Any text surrounded by parentheses `()` is considered optional.
+
+  Any words separated by a slash `/` are considered to be alternates.
+
+  You can find full documentation about Cucumber Expressions at https://cucumber.io/docs/cucumber/cucumber-expressions
+
+
+### Custom parameters
+
+Although you can get a long way with Cucumber Expressions' built-in parameter types, you get real power when you define your own *custom parameter types*. This allows you to transform the text captured from the Gherkin into any object you like before it’s passed into your step definition.
+
+For example, let’s define our own `{person}` custom parameter type that will convert the string `Lucy` into an instance of `Person` automatically.
+
+We can start with the step definition, which would look something like this:
+```ruby
+Given("{person} is located/standing {int} metre(s) from Sean") do |person, distance|
+  person.move_to(distance)
+end
+```
+If we run Cucumber at this point we’ll see an error, because we haven’t defined the `{person}` parameter type yet.
+```shell
+$ bundle exec cucumber
+Undefined parameter type {person} (Cucumber::CucumberExpressions::UndefinedParameterTypeError)
+```
+Here’s how we define one.
+
+Let’s create a new Ruby file in `features/support `called `person_parameter.rb`:
+```
+person_parameter.rb
+```
+```ruby
+require 'shouty'
+```
+We use the `ParameterType` DSL method from Cucumber to define our new parameter type.
+
+We need to give it a `name` which is the name we’ll use inside the curly brackets in our step definition expressions.
+
+We also need to define — gasp! — a regular expression. This is neccesary to tell cucumber expressions what text to match when searching for this parameter in a Gherkin step. We won’t go into the details of regular expressions in this video, but in this case we’re just matching on either of the names of the people we’re using in our scenario.
+
+Finally, there’s a transformer block, which takes the text captured from the Gherkin step that matched the regular expression pattern, and runs some code. The return value of this block is what will be passed to the step definition. In this case, the block is passed the name of the person (as a string) which we can then pass to the `Person` class’s constructor.
+```
+person_parameter.rb
+```
+```ruby
+require 'shouty'
+
+ParameterType(
+  name:        'person',
+  regexp:      /Lucy|Sean/,
+  transformer: -> (name) { Shouty::Person.new(name) }
+)
+```
+All of this means that when we run our step, we’ll be passed an instance of `Person` into our step definition automatically.
+```shell
+$ bundle exec cucumber
+Feature: Hear shout
+
+  Scenario: Listener is within range         # features/hear_shout.feature:2
+    Given Lucy is standing 1 metre from Sean # features/step_definitions/steps.rb:3
+    When Sean shouts "free bagels at Sean's" # features/step_definitions/steps.rb:8
+    Then Lucy hears Sean's message           # features/step_definitions/steps.rb:14
+
+1 scenario (1 passed)
+3 steps (3 passed)
+```
+Custom parameters allow you to bring your domain *model* - the names of the classes and objects in your solution - and your domain *language* - the words you use in your scenarios and step defintions - closer together.
+
+#### Quiz
+
+- We use a Regular Expression to specify the text that should be matched when a custom Parameter Type is used in a Cucumber Expression.
+
+- The name of a custom Parameter Type is defined by the name of the method that is decorated with the `@ParameterType` annotation.

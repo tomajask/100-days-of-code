@@ -2,6 +2,12 @@
 
 module Shouty
   class Person
+    attr_accessor :name
+
+    def initialize(name = nil)
+      @name = name
+    end
+
     def move_to(distance)
     end
 

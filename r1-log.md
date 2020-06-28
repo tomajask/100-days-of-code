@@ -4,6 +4,14 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D12
+
+Continued with BDD w/ Cucumber from [Cucumber School](https://school.cucumber.io/) and finished with the lessons that were ready. The half of the course is still being prepared. That's a pitty :(
+
+### R1D11
+
+Started BDD w/ Cucumber from [Cucumber School](https://school.cucumber.io/)
+
 ### R1D10
 
 Continued with JS course -> arrays' methods.

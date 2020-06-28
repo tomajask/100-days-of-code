@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 require "shouty"
 
-Given("Lucy is located/stands {int}( )metre(s)/m from Sean") do |distance|
-  @lucy = Shouty::Person.new
+Given("{person} is located/stands {int}( )metre(s)/m from Sean") do |person, distance|
+  @lucy = person
   @sean = Shouty::Person.new
-  @lucy.move_to(distance)
+  person.move_to(distance)
 end
 
 When("Sean shouts {string}") do |message|
