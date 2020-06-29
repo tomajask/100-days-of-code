@@ -4,6 +4,14 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D13
+
+Something different today. Is it possible to watch Netflix on RPi connected to the TV? Yes, it is!
+
+This article describes it well: https://www.maketecheasier.com/run-kodi-netflix-raspberry-pi/
+And this GH issue solves the problem on the way: https://github.com/asciidisco/plugin.video.netflix/issues/665#issuecomment-483453676
+
+
 ### R1D12
 
 Continued with BDD w/ Cucumber from [Cucumber School](https://school.cucumber.io/) and finished with the lessons that were ready. The half of the course is still being prepared. That's a pitty :(
