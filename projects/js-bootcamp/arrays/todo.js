@@ -1,19 +1,31 @@
-const todos = [
-  'Mount the roof rack',
-  'Go shopping',
-  'Watch A on Netflix',
-  'Go swimming',
-  'Go for a walk'
-]
+const todos = [{
+  text: 'Mount the roof rack',
+  completed: false
+}, {
+  text: 'Go shopping',
+  completed: false
+}, {
+  text: 'Watch A on Netflix',
+  completed: false
+}, {
+  text: 'Go swimming',
+  completed: false
+}, {
+  text: 'Go for a walk',
+  completed: false
+}]
 
-console.log(`You have ${todos.length} todos.`)
-console.log(`TODO: ${todos[todos.length - 1]}`)
+const deleteTodo = function (todos, todoText) {
+  const index = todos.findIndex(function (note, _index) {
+    return note.text.toLowerCase() === todoText.toLowerCase()
+  })
+  if (index > -1 ) {
+    todos.splice(index, 1)
+  }
+}
 
-todos.splice(2, 1)                  // remove the third item
-todos.push('Learn some Javacript')  // add new last item
-todos.shift()                       // remove the first item
+console.log(todos)
 
-todos.forEach(function (item, index) { // callback function passed to the forEach function
-  console.log(`${index + 1}. ${item}`)
-})
+deleteTodo(todos, 'go shopping')
 
+console.log(todos)

@@ -4,6 +4,14 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D15
+
+Continued with JS course -> arrays' loop & searching methods.
+
+### R1D14
+
+I did https://ecsworkshop.com/ workshops.
+
 ### R1D13
 
 Something different today. Is it possible to watch Netflix on RPi connected to the TV? Yes, it is!
