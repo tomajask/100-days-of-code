@@ -1,18 +1,18 @@
 const todos = [{
   text: 'Mount the roof rack',
-  completed: false
+  completed: true
 }, {
   text: 'Go shopping',
   completed: false
 }, {
   text: 'Watch A on Netflix',
-  completed: false
+  completed: true
 }, {
   text: 'Go swimming',
   completed: false
 }, {
   text: 'Go for a walk',
-  completed: false
+  completed: true
 }]
 
 const deleteTodo = function (todos, todoText) {
@@ -24,8 +24,25 @@ const deleteTodo = function (todos, todoText) {
   }
 }
 
-console.log(todos)
+const getThingsToDo = function(todos) {
+  return todos.filter(function (todo, _index) {
+    return !todo.completed
+  })
+}
 
-deleteTodo(todos, 'go shopping')
+console.log(getThingsToDo(todos))
+console.log()
 
-console.log(todos)
+const sortTodos = function(todos) {
+  return todos.sort(function (a, b) {
+    if (a.completed < b.completed) {
+      return -1
+    } else if (a.completed > b.completed) {
+      return 1
+    } else {
+      return 0
+    }
+  })
+}
+
+console.log(sortTodos(todos))

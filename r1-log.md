@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D16
+
+Continued with JS course -> improving the expense tracker.
+
 ### R1D15
 
 Continued with JS course -> arrays' loop & searching methods.
