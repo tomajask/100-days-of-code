@@ -4,6 +4,18 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D19
+
+Continued with JS course -> getting familiar with event listeners.
+
+### R1D18
+
+I migrated my blog https://tjay.dev to the new VPS instance! Yay!
+
+### R1D17
+
+Continued with JS course -> getting to know the DOM basics.
+
 ### R1D16
 
 Continued with JS course -> improving the expense tracker.
