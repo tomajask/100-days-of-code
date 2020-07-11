@@ -34,17 +34,25 @@ document.querySelector('#create-note').addEventListener('click', function (event
   event.target.textContent = 'This button was clicked'
 })
 
-document.querySelector('#remove-all').addEventListener('click', function (event) {
-  document.querySelectorAll('p.note').forEach(function (note) {
-    note.remove()
-  })
-})
-
 document.querySelector('#search-text').addEventListener('input', function(e) {
   console.log(e.target.value)
   filters.searchText = e.target.value
   renderNotes(notes, filters)
 })
+
+document.querySelector('#name-form').addEventListener('submit', function (e) {
+  e.preventDefault()
+  console.log(e.target.elements.firstName.value)
+  e.target.elements.firstName.value = ''
+})
+
+
+
+
+
+
+
+
 
 // // Query and remove
 // const p = document.querySelector('p')

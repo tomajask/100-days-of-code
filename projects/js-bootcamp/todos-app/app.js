@@ -19,22 +19,20 @@ const filters = {
   searchText: ''
 }
 
-const incompleteTodos = todos.filter(function (todo) {
-  return !todo.completed
-})
-
-const summaryItem = document.createElement('h3')
-summaryItem.textContent = `You have ${incompleteTodos.length} todos left.`
-
-const bodyElement = document.querySelector('div#notes-summary')
-bodyElement.appendChild(summaryItem)
-
 const renderTodos = function (todos, filters) {
   const todosElement = document.querySelector('div#todos')
   todosElement.innerHTML = ''
-  const filteredTodos = todos.filter(function (todo) {
+
+  const incompleteTodos = todos.filter(function (todo) {
+    return !todo.completed
+  })
+  const filteredTodos = incompleteTodos.filter(function (todo) {
     return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
   })
+  const summaryItem = document.createElement('h3')
+  summaryItem.textContent = `You have ${incompleteTodos.length} todos left.`
+  todosElement.appendChild(summaryItem)
+
   filteredTodos.forEach(function (todo) {
     const newElement = document.createElement('p')
     newElement.textContent = todo.text
@@ -43,18 +41,19 @@ const renderTodos = function (todos, filters) {
   })
 }
 
-renderTodos(incompleteTodos, filters)
-
-document.querySelector('button#add-todo').addEventListener('click', function(ev) {
-  console.log(ev)
-  console.log("You added a new todo!")
-})
-
-document.querySelector('input#new-todo').addEventListener('input', function(e) {
-  console.log(e)
-})
+renderTodos(todos, filters)
 
 document.querySelector('input#search-todos').addEventListener('input', function(e) {
   filters.searchText = e.target.value
-  renderTodos(incompleteTodos, filters)
+  renderTodos(todos, filters)
+})
+
+document.querySelector('form#todo-form').addEventListener('submit', function (e) {
+  e.preventDefault()
+  todos.push({
+    text: e.target.elements.text.value,
+    comepleted: false
+  })
+  renderTodos(todos, filters)
+  e.target.elements.text.value = ''
 })
