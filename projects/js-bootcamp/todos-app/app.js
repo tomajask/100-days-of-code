@@ -16,7 +16,8 @@ const todos = [{
 }]
 
 const filters = {
-  searchText: ''
+  searchText: '',
+  hideCompleted: false
 }
 
 const renderTodos = function (todos, filters) {
@@ -26,8 +27,10 @@ const renderTodos = function (todos, filters) {
   const incompleteTodos = todos.filter(function (todo) {
     return !todo.completed
   })
-  const filteredTodos = incompleteTodos.filter(function (todo) {
-    return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+  const filteredTodos = todos.filter(function (todo) {
+    const matchingSearchText = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+    const shouldBeDisplayed = !(filters.hideCompleted && todo.completed)
+    return matchingSearchText && shouldBeDisplayed
   })
   const summaryItem = document.createElement('h3')
   summaryItem.textContent = `You have ${incompleteTodos.length} todos left.`
@@ -35,7 +38,7 @@ const renderTodos = function (todos, filters) {
 
   filteredTodos.forEach(function (todo) {
     const newElement = document.createElement('p')
-    newElement.textContent = todo.text
+    newElement.textContent = `Completed: ${todo.completed} | ${todo.text}`
     newElement.classList.add('todo')
     todosElement.appendChild(newElement)
   })
@@ -56,4 +59,9 @@ document.querySelector('form#todo-form').addEventListener('submit', function (e)
   })
   renderTodos(todos, filters)
   e.target.elements.text.value = ''
+})
+
+document.querySelector('#hide-completed').addEventListener('change', function (e) {
+  filters.hideCompleted = e.target.checked
+  renderTodos(todos, filters)
 })
