@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D23
+
+Continued with JS course -> manipulating DOM.
+
 ### R1D19
 
 Continued with JS course -> getting familiar with event listeners.
