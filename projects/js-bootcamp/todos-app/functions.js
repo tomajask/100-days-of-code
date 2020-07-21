@@ -35,9 +35,18 @@ const renderTodos = function (todos, filters) {
 
 // Get the DOM elements for an individual note
 const generateTodoDOM = function(todo) {
-  const newElement = document.createElement('p')
-  newElement.textContent = `Completed: ${todo.completed} | ${todo.text}`
-  newElement.classList.add('todo')
+  const newElement = document.createElement('div')
+  const textEl = document.createElement('span')
+  const checkbox = document.createElement('input')
+  checkbox.setAttribute('type', 'checkbox')
+  const button = document.createElement('button')
+  button.textContent = 'X'
+
+  textEl.textContent = `Completed: ${todo.completed} | ${todo.text}`
+
+  newElement.appendChild(checkbox)
+  newElement.appendChild(textEl)
+  newElement.appendChild(button)
   return newElement
 }
 
