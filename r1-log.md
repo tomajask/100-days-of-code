@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D25
+
+Continued with JS course -> adding `edit.html` file and using as a form.
+
 ### R1D24
 
 Continued with JS course -> refactored notes & todos apps.
