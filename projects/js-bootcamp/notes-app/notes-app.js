@@ -35,3 +35,7 @@ window.addEventListener('storage', function(e) {
     renderNotes(notes, filters)
   }
 })
+
+const date = moment()
+date.year(1970).month("Jan").date(1).hour(1)
+console.log(date.format("MMM D, YYYY"))

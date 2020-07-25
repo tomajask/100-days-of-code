@@ -6,7 +6,7 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ### R1D27
 
-Continued with JS course -> syncing data across pages
+Continued with JS course -> syncing data across pages & adding Moment.js lib.
 
 ### R1D25
 
