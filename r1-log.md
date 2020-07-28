@@ -6,7 +6,7 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ### R1D29
 
-
+Continued with JS course -> Implementing Arrow Functions in Todo & Notes apps.
 
 ### R1D28
 
