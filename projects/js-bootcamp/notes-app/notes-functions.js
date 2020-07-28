@@ -63,8 +63,16 @@ const sortNotes = function (notes, sortBy) {
     case 'byCreated':
       return notes.sort((a, b) => b.createdAt - a.createdAt)
       break
-    case 'alphabetical':
-      return notes // TODO:
+    case 'alphabetically':
+      return notes.sort(function (a, b) {
+        if (a.title.toLowerCase() > b.title.toLowerCase()) {
+          return 1
+        } else if (a.title.toLowerCase() < b.title.toLowerCase()) {
+          return -1
+        } else {
+          return 0
+        }
+      })
       break
     default:
       return notes

@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D29
+
+
+
 ### R1D28
 
 Continued with JS course -> Adding timestamp and sorting by them.
