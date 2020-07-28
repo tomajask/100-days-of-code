@@ -29,6 +29,7 @@ const generateNoteDOM = function (note) {
   const noteEl = document.createElement('div')
   const textEl = document.createElement('a')
   const button = document.createElement('button')
+  const lastEdited = document.createElement('span')
 
   button.textContent = 'X'
   noteEl.appendChild(button)
@@ -47,11 +48,32 @@ const generateNoteDOM = function (note) {
   noteEl.classList.add("note")
   noteEl.appendChild(textEl)
 
+  lastEdited.textContent = generateLastEdited(note.updatedAt)
+  noteEl.appendChild(lastEdited)
+
   return noteEl
+}
+
+// Sort notes by one of three ways
+const sortNotes = function (notes, sortBy) {
+  switch (sortBy) {
+    case 'byEdited':
+      return notes.sort((a, b) => b.updatedAt - a.updatedAt)
+      break
+    case 'byCreated':
+      return notes.sort((a, b) => b.createdAt - a.createdAt)
+      break
+    case 'alphabetical':
+      return notes // TODO:
+      break
+    default:
+      return notes
+  }
 }
 
 // Render application notes
 const renderNotes = function(notes, filters) {
+  notes = sortNotes(notes, filters.sortBy)
   const filteredNotes = notes.filter(function (note) {
     return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
   })
@@ -60,4 +82,9 @@ const renderNotes = function(notes, filters) {
     const noteEl = generateNoteDOM(note)
     document.querySelector('#notes').appendChild(noteEl)
   })
+}
+
+// Generate the last edited message
+const generateLastEdited = function(timestamp) {
+  return `Last edited ${moment(timestamp).fromNow()}`
 }

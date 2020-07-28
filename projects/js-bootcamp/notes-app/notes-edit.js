@@ -1,5 +1,6 @@
 const titleInput = document.querySelector('#note-title')
 const bodyInput = document.querySelector('#note-body')
+const dateElement = document.querySelector('#last-edited')
 
 const noteId = location.hash.substring(1)
 let notes = getSavedNotes()
@@ -13,14 +14,19 @@ if (note === undefined) {
 
 titleInput.value = note.title
 bodyInput.value = note.body
+dateElement.textContent = generateLastEdited(note.updatedAt)
 
 titleInput.addEventListener('change', function(e) {
   note.title = e.target.value
+  note.updatedAt = moment().valueOf()
+  dateElement.textContent = generateLastEdited(note.updatedAt)
   saveNotes(notes)
 })
 
 bodyInput.addEventListener('change', function(e) {
   note.body = e.target.value
+  note.updatedAt = moment().valueOf()
+  dateElement.textContent = generateLastEdited(note.updatedAt)
   saveNotes(notes)
 })
 
@@ -44,5 +50,6 @@ window.addEventListener('storage', function (e) {
 
     titleInput.value = note.title
     bodyInput.value = note.body
+    dateElement.textContent = generateLastEdited(note.updatedAt)
   }
 })
