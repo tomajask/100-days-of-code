@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D30
+
+Continued with JS course -> implementing Conditional (Ternary) Operator.
+
 ### R1D29
 
 Continued with JS course -> Implementing Arrow Functions in Todo & Notes apps.
