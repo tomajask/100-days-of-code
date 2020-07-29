@@ -6,7 +6,7 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ### R1D30
 
-Continued with JS course -> implementing Conditional (Ternary) Operator.
+Continued with JS course -> implementing Conditional (Ternary) Operator + learning about truthy & falsy values
 
 ### R1D29
 
