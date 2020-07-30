@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D31
+
+Continued with JS course -> type coercion, try & catch, handling application errors, strict mode.
+
 ### R1D30
 
 Continued with JS course -> implementing Conditional (Ternary) Operator + learning about truthy & falsy values

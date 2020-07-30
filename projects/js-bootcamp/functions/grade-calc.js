@@ -1,4 +1,8 @@
 const getScore = function (studentScore, totalScore) {
+  if (typeof studentScore !== 'number' || typeof totalScore !== 'number') {
+    throw Error('Arguments must be numbers')
+  }
+
   const percentage = studentScore / totalScore * 100
   let letterGrade = ''
 
@@ -19,3 +23,9 @@ const getScore = function (studentScore, totalScore) {
 console.log(getScore(99, 100))
 console.log(getScore(2, 6))
 console.log(getScore(15, 20))
+
+try {
+  console.log(getScore('number', 10))
+} catch (e) {
+  console.log(`Caught an error: ${e.message}`)
+}
