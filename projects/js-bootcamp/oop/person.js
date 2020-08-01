@@ -24,10 +24,14 @@ console.log(Person.prototype)
 
 
 const me = new Person('Thomas', 'Jaskiewicz', 29, ['Coding', 'Plants'])
+
+// me.getBio = function () {
+//   return 'This is fake!'
+// }
+
 me.setName('Alexis Turner')
+console.log(me)
 console.log(me.getBio())
 
 const person2 = new Person('Andrew', 'Mead', 27)
-
 console.log(person2.getBio())
-

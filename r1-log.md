@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D33
+
+Continued with JS course -> improved Hangman game
+
 ### R1D32
 
 Continued with JS course -> OOP in JavaScript, Constructor Functions, Setting up the Prototype Object, started writing Hangman game
