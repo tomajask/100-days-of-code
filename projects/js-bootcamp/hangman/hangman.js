@@ -1,53 +1,55 @@
 'use strict'
 
-const Hangman = function (word, remainingGuesses) {
-  this.status = 'playing'
-  this.word = word.toLowerCase().split('')
-  this.guessedLetters = [' ']
-  this.remainingGuesses = remainingGuesses
-}
-
-Hangman.prototype.getPuzzle = function () {
-  const puzzle = this.word.map((letter) => this.guessedLetters.includes(letter) ? letter : '*')
-  return puzzle.join('')
-}
-
-Hangman.prototype.makeGuess = function (letter) {
-  if (this.status !== 'playing') {
-    return
+class Hangman {
+  constructor(word, remainingGuesses) {
+    this.status = 'playing'
+    this.word = word.toLowerCase().split('')
+    this.guessedLetters = [' ']
+    this.remainingGuesses = remainingGuesses
   }
-  letter = letter.toLowerCase()
 
-  if (this.word.includes(letter)) {
-    if (!this.guessedLetters.includes(letter)) {
-      this.guessedLetters.push(letter)
+  getPuzzle() {
+    const puzzle = this.word.map((letter) => this.guessedLetters.includes(letter) ? letter : '*')
+    return puzzle.join('')
+  }
+
+  makeGuess(letter) {
+    if (this.status !== 'playing') {
+      return
     }
-  } else {
-    this.remainingGuesses--
+    letter = letter.toLowerCase()
+
+    if (this.word.includes(letter)) {
+      if (!this.guessedLetters.includes(letter)) {
+        this.guessedLetters.push(letter)
+      }
+    } else {
+      this.remainingGuesses--
+    }
+    this.calculateStatus()
   }
-  this.calculateStatus()
-}
 
-Hangman.prototype.calculateStatus = function () {
-  const isFinished = this.word.every((letter) => this.guessedLetters.includes(letter))
+  calculateStatus() {
+    const isFinished = this.word.every((letter) => this.guessedLetters.includes(letter))
 
-  if (isFinished && this.remainingGuesses >= 0) {
-    this.status = 'finished'
-  } else if (this.remainingGuesses === 0) {
-    this.status = 'failed'
+    if (isFinished && this.remainingGuesses >= 0) {
+      this.status = 'finished'
+    } else if (this.remainingGuesses === 0) {
+      this.status = 'failed'
+    }
   }
-}
 
-Hangman.prototype.getStatusMessage = function () {
-  switch (this.status) {
-    case 'playing':
-      return `Guesses left: ${this.remainingGuesses}`
-      break
-    case 'failed':
-      return `Nice try! The word was "${this.word.join('')}"`
-      break
-    case 'finished':
-      return 'Great work! You guesses the word!'
-      break
+  getStatusMessage() {
+    switch (this.status) {
+      case 'playing':
+        return `Guesses left: ${this.remainingGuesses}`
+        break
+      case 'failed':
+        return `Nice try! The word was "${this.word.join('')}"`
+        break
+      case 'finished':
+        return 'Great work! You guesses the word!'
+        break
+    }
   }
 }
