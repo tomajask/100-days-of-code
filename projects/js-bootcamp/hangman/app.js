@@ -12,16 +12,13 @@ const guessesEl = document.querySelector('#guesses')
 const puzzleEl = document.querySelector('#puzzle')
 
 const game1 = new Hangman('Cat', 2)
-game1.printRemainingGuesses()
-game1.printPuzzle()
+guessesEl.textContent = game1.getStatusMessage()
+puzzleEl.textContent = game1.getPuzzle()
 
 window.addEventListener('keypress', function(e) {
-  if (game1.status === 'playing') {
-    const guess = String.fromCharCode(e.charCode)
-    game1.makeGuess(guess)
-    game1.calculateStatus()
-    game1.printRemainingGuesses()
-    game1.printPuzzle()
-    console.log(`Status: ${game1.status}`)
-  }
+  const guess = String.fromCharCode(e.charCode)
+  game1.makeGuess(guess)
+  guessesEl.textContent = game1.getStatusMessage()
+  puzzleEl.textContent = game1.getPuzzle()
+  console.log(`Status: ${game1.status}`)
 })

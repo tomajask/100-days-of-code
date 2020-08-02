@@ -13,6 +13,9 @@ Hangman.prototype.getPuzzle = function () {
 }
 
 Hangman.prototype.makeGuess = function (letter) {
+  if (this.status !== 'playing') {
+    return
+  }
   letter = letter.toLowerCase()
 
   if (this.word.includes(letter)) {
@@ -22,14 +25,7 @@ Hangman.prototype.makeGuess = function (letter) {
   } else {
     this.remainingGuesses--
   }
-}
-
-Hangman.prototype.printRemainingGuesses = function () {
-  guessesEl.textContent = this.remainingGuesses
-}
-
-Hangman.prototype.printPuzzle = function () {
-  puzzleEl.textContent = this.getPuzzle()
+  this.calculateStatus()
 }
 
 Hangman.prototype.calculateStatus = function () {
@@ -39,5 +35,19 @@ Hangman.prototype.calculateStatus = function () {
     this.status = 'finished'
   } else if (this.remainingGuesses === 0) {
     this.status = 'failed'
+  }
+}
+
+Hangman.prototype.getStatusMessage = function () {
+  switch (this.status) {
+    case 'playing':
+      return `Guesses left: ${this.remainingGuesses}`
+      break
+    case 'failed':
+      return `Nice try! The word was "${this.word.join('')}"`
+      break
+    case 'finished':
+      return 'Great work! You guesses the word!'
+      break
   }
 }
