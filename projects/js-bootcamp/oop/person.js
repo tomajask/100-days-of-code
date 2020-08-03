@@ -17,9 +17,12 @@ class Person {
 
     return bio
   }
-  setName(fullName) {
+  set fullName(fullName) {
     // Destructuring assignment - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
     [this.firstName, this.lastName] = fullName.split(' ')
+  }
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`
   }
 }
 
@@ -30,7 +33,7 @@ class Employee extends Person {
   }
 
   getBio() {
-    return `${this.firstName} is a ${this.position}.`
+    return `${this.fullName} is a ${this.position}.`
   }
 
   getYearsLeft() {
@@ -54,10 +57,16 @@ class Student extends Person {
   }
 }
 
-const student = new Student('Rocky', 'Balboa', 23, 90)
+const student = new Employee('Rocky', 'Balboa', 49, 'Fighter')
+student.fullName = 'Clancey Turner'
 console.log(student.getBio())
-student.updateGrade(-40)
-console.log(student.getBio())
+
+
+// const student = new Student('Rocky', 'Balboa', 23, 90)
+// student.fullName = 'Clancey Turner'
+// console.log(student.getBio())
+// student.updateGrade(-40)
+// console.log(student.getBio())
 
 
 
