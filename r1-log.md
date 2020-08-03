@@ -4,9 +4,13 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
-### R1D34
+### R1D35
 
 Continued with JS course -> setters & getters in JavaScript.
+
+### R1D35
+
+Continued with JS course -> classes & subclasses.
 
 ### R1D33
 
