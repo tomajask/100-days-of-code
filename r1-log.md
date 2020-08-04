@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D36
+
+Continued with JS course -> fetching data from APIs.
+
 ### R1D35
 
 Continued with JS course -> setters & getters in JavaScript.
