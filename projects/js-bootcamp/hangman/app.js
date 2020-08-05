@@ -23,6 +23,7 @@ window.addEventListener('keypress', (e) => {
   console.log(`Status: ${game1.status}`)
 })
 
+// Async execution
 getPuzzle((error, puzzle) => {
   if (error) {
     console.log(`Error: ${error}`)
@@ -31,23 +32,10 @@ getPuzzle((error, puzzle) => {
   }
 })
 
-
-// // Making an HTTP request
-
-
-// const countryCode = "PL"
-
-// const req = new XMLHttpRequest()
-
-// req.addEventListener('readystatechange', (e) => {
-//   if (e.target.status === 200 & e.target.readyState === 4) {
-//     const data = JSON.parse(e.target.responseText)
-//     const country = data.find((item) => item.alpha2Code === countryCode)
-//     console.log(country.name)
-//   } else if (e.target.readyState === 4) {
-//     console.log('An error has taken place')
-//   }
-// })
-
-// req.open('GET', 'http://restcountries.eu/rest/v2/all')
-// req.send()
+getCountry('MX', (error, country) => {
+  if (error) {
+    console.log(`Error: ${error}`)
+  } else {
+    console.log(`Country: ${country.name}`)
+  }
+})

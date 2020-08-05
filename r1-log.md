@@ -6,7 +6,7 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ### R1D37
 
-Continued with JS course -> Callback Abstraction.
+Continued with JS course -> Callback Abstraction & Synchronous/Asynchronous execution.
 
 ### R1D36
 
