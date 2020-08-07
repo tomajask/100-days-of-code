@@ -24,18 +24,14 @@ window.addEventListener('keypress', (e) => {
 })
 
 // Async execution
-getPuzzle((error, puzzle) => {
-  if (error) {
-    console.log(`Error: ${error}`)
-  } else {
-    console.log(puzzle)
-  }
+getPuzzle('3').then((puzzle) => {
+  console.log(puzzle)
+}, (err) => {
+  console.log(err)
 })
 
-getCountry('MX', (error, country) => {
-  if (error) {
-    console.log(`Error: ${error}`)
-  } else {
-    console.log(`Country: ${country.name}`)
-  }
+getCountry('PL').then((country) => {
+  console.log(country.name)
+}, (err) => {
+  console.log(error)
 })

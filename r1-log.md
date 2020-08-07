@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D39
+
+Continued with JS course -> Promises.
+
 ### R1D38
 
 Continued with JS course -> Closures.
