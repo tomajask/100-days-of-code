@@ -30,19 +30,19 @@ getPuzzle('3').then((puzzle) => {
   console.log(err)
 })
 
-getCountry('IS').then((country) => {
-  console.log(country.name)
+getCurrentCountry().then((data) => {
+  console.log(`You are currently in ${data.location.city}, ${data.location.region}, ${data.country.name}`)
 }).catch((err) => {
   console.log(err)
 })
 
-getLocation().then((location) => {
-  return getCountry(location.country).then((country) => {
-    console.log(`You are currently in ${location.city}, ${location.region}, ${country.name}`)
-  })
-}).catch((err) => {
-  console.log(err)
-})
+// getLocation().then((location) => {
+//   return getCountry(location.country).then((country) => {
+//     console.log(`You are currently in ${location.city}, ${location.region}, ${country.name}`)
+//   })
+// }).catch((err) => {
+//   console.log(err)
+// })
 
 
 // fetch('http://puzzle.mead.io/puzzle', {}).then((response) => {
