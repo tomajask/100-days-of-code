@@ -36,6 +36,10 @@ document.querySelector('#remove-note').addEventListener('click', () => {
   location.assign('/index.html')
 })
 
+document.querySelector('#save-note').addEventListener('click', () => {
+  location.assign('/index.html')
+})
+
 // It fires for other tabs, not the current tab.
 window.addEventListener('storage', (e) => {
   if (e.key === 'notes') {

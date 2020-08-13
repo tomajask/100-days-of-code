@@ -4,22 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes App</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <h1>Notes App</h1>
-    <h2>Take notes and never forget</h2>
-    <input id="search-text" type="text" placeholder="search notes">
-    <select id="filter-by">
-      <option value="byEdited">Sort by last edited</option>
-      <option value="byCreated">Sort by recently created</option>
-      <option value="alphabetically">Sort alphabetically</option>
-    </select>
-    <div id="notes"></div>
-    <button id="create-note">Create Note</button>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">Notes App</h1>
+        <h2 class="header__subtitle">Take notes and never forget</h2>
+      </div>
+    </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
+    <div class="actions">
+      <div class="actions__container">
+        <input id="search-text" type="text" class="input" placeholder="search notes">
+        <select id="filter-by" class="dropdown">
+          <option value="byEdited">Sort by last edited</option>
+          <option value="byCreated">Sort by recently created</option>
+          <option value="alphabetically">Sort alphabetically</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="notes"></div>
+      <button id="create-note" class="button">Create Note</button>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
-    <script src="notes-functions.js"></script>
-    <script src="notes-app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
+    <script src="scripts/notes-functions.js"></script>
+    <script src="scripts/notes-app.js"></script>
   </body>
 </html>

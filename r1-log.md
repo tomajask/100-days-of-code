@@ -4,9 +4,13 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D44
+
+Continued with JS course -> Adding CSS to Notes App and deploying it to [Netlify](https://elegant-shockley-d6038d.netlify.app/).
+
 ### R1D43
 
-Continued with JS course -> Adding CSS to Hangman and deploying it to Netlify.
+Continued with JS course -> Adding CSS to Hangman and deploying it to [Netlify](https://reverent-tesla-958770.netlify.app/).
 
 ### R1D42
 
