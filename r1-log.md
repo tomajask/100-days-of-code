@@ -6,8 +6,9 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ### R1D45
 
-Continued with JS course -> Adding CSS to Todos App and deploying it to [Netlify](https://eager-wozniak-2213de.netlify.app/).
-
+Continued with JS course ->
+- Adding CSS to Todos App and deploying it to [Netlify](https://eager-wozniak-2213de.netlify.app/).
+- Modified Hangman game to use Boilerplate and deployed it to [Netlify](https://reverent-tesla-958770.netlify.app/) using Webpack with Babel.
 
 ### R1D44
 
