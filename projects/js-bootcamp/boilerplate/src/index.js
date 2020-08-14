@@ -1,12 +1,10 @@
-const name = 'Jen'
+import otherSquare, { add, name } from './utilities.js'
+import otherScream from './scream.js'
 
+console.log('index.js')
+console.log(add(1, 35))
 console.log(name)
 
-class Hangman {
-  myMethod() {
-    return 'Testing'
-  }
-}
+console.log(otherScream('Watch out'))
 
-const hangman = new Hangman()
-console.log(hangman.myMethod())
+console.log(otherSquare(100))
