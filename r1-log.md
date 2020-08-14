@@ -4,6 +4,11 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D45
+
+Continued with JS course -> Adding CSS to Todos App and deploying it to [Netlify](https://eager-wozniak-2213de.netlify.app/).
+
+
 ### R1D44
 
 Continued with JS course -> Adding CSS to Notes App and deploying it to [Netlify](https://elegant-shockley-d6038d.netlify.app/).
