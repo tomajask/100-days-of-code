@@ -4,6 +4,10 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ## Log
 
+### R1D46 & R1D47
+
+Continued with JS course -> Rewriting a Notes App to use Babel & Webpack and deploying it to [Netlify](https://elegant-shockley-d6038d.netlify.app/).
+
 ### R1D45
 
 Continued with JS course ->

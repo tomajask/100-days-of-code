@@ -1,10 +1,14 @@
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
-  entry: ['@babel/polyfill', './src/index.js'],
+  entry: {
+    index: ['@babel/polyfill', './src/index.js'],
+    edit: ['@babel/polyfill', './src/edit.js']
+  },
   output: {
     path: path.resolve(__dirname, 'public/scripts'),
-    filename: 'bundle.js'
+    filename: '[name]-bundle.js'
   },
   module: {
     rules: [{
@@ -22,5 +26,9 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'public'),
     publicPath: '/scripts/'
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  plugins: [
+    // Ignore all locale files of moment.js
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+  ]
 }
