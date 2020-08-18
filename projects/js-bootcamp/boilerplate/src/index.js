@@ -68,3 +68,9 @@ console.log(firstAge, secondAge, fourthAge, lastAge)
 
 const [ageOne, ...otherAges] = age
 console.log(ageOne, otherAges)
+
+
+const printTodo = ({ text, completed }) => {
+  console.log(`${text}: ${completed}`)
+}
+printTodo(todo)

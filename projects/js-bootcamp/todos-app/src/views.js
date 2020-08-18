@@ -3,15 +3,15 @@ import { getTodos, removeTodo, saveTodos, toggleTodo } from './todos'
 
 const renderTodos = () => {
   const todos = getTodos()
-  const filters = getFilters()
+  const { searchText, hideCompleted } = getFilters()
   const todosElement = document.querySelector('#todos')
   todosElement.innerHTML = ''
 
   const incompleteTodos = todos.filter((todo) => !todo.completed)
 
   const filteredTodos = todos.filter((todo) => {
-    const matchingSearchText = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
-    const shouldBeDisplayed = !(filters.hideCompleted && todo.completed)
+    const matchingSearchText = todo.text.toLowerCase().includes(searchText.toLowerCase())
+    const shouldBeDisplayed = !(hideCompleted && todo.completed)
     return matchingSearchText && shouldBeDisplayed
   })
   todosElement.appendChild(generateSummaryDOM(incompleteTodos))

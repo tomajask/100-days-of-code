@@ -6,7 +6,8 @@ The log of my #100DaysOfCode challenge. Started on [June 16, 2020].
 
 ### R1D49
 
-Continued with JS course -> The Rest Parameter, The Spread Operator, Destructurizing
+- Continued with JS course -> The Rest Parameter, The Spread Operator, Destructurizing
+- Finished the [The Modern JavaScript Bootcamp](https://www.udemy.com/course/modern-javascript/) by [Andrew Mead](https://twitter.com/andrew_j_mead)
 
 ### R1D48
 
