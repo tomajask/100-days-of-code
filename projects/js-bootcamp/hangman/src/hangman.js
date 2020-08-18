@@ -35,7 +35,7 @@ class Hangman {
 
     if (this.word.includes(letter)) {
       if (!this.guessedLetters.includes(letter)) {
-        this.guessedLetters.push(letter)
+        this.guessedLetters = [...this.guessedLetters, guess]
       }
     } else {
       this.remainingGuesses--
